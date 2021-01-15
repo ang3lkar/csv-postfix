@@ -1,5 +1,5 @@
 class PostfixEvaluator
-  NUMBER_PATTERN   = /^(\d)+$/
+  NUMBER_PATTERN   = /^(-)?(\d)+$/
   OPERATOR_PATTERN = /^(\+|\-|\*|\/)$/
   CELL_PATTERN     = /^[A-Za-z]{1}[0-9]+$/
 
@@ -55,7 +55,7 @@ class PostfixEvaluator
         recursive_result = if evaluated_cell
                              evaluated_cell
                            else
-                              if visited_cells.include?(token) # causes infinite loop
+                              if visited_cells.include?(token) # cell already visited, stop here to avoid infinite loop
                                 "#ERR"
                               else
                                 visited_cells << token
