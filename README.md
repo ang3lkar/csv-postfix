@@ -1,6 +1,6 @@
 # Hello
 
-This is a **Ruby** implementation for the Spreadsheet Programming Task.
+This is a **Ruby** implementation for reading a Postfix notation from a CSV file.
 
 ## How to run
 ```sh
@@ -55,7 +55,6 @@ It also contains invalid cells, to verify the the script can handle gracefully:
 ## Limitations
 
 * Columns are limited to 26 (A-Z). No double letter notations.
-* Circular dependencies between cells are not handled.
 
 ## Design Decisions
 
